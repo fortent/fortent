@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
@@ -74,9 +73,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #heroku uses heroku postgres DB based on postgreSQL
 
-  group :production do
-
-    gem 'pg', '0.17.1'
-    gem 'rails_12factor' , '0.0.2'
-
-  end 
+group :production do
+  gem 'pg'
+end 
